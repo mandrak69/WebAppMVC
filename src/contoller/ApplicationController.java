@@ -15,6 +15,7 @@ public class ApplicationController {
 		 * koja je zaduzena za obradu zahteva
 		 */
 		String page = "/WEB-INF/pages/error/defaultErrorPage.jsp";
+		System.out.println("izabran "+pathInfo);
 		AbstractAction action = ActionFactory.createActionFactory(pathInfo);
 		
 		if (action != null) {

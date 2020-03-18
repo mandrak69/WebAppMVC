@@ -2,8 +2,11 @@ package action.impl;
 
 import java.util.List;
 
+import javax.jws.WebMethod;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
+import javax.xml.ws.WebEndpoint;
 
 import action.AbstractAction;
 import domain.City;
@@ -17,7 +20,7 @@ public class CityAction extends AbstractAction {
 	@Override
 	public String execute(HttpServletRequest request) {
 		String page = "";
-		System.out.println("oper"+request.getParameter("operation"));
+		System.out.println("oper je za "+request.getParameter("operation"));
 		if (request.getParameter("operation").equals("allCities")) {
 			page = "/WEB-INF/pages/allcity.jsp";
 		} else if (request.getParameter("operation").equals("NewCity")) {
@@ -76,7 +79,7 @@ public class CityAction extends AbstractAction {
 		}
 
 	}
-
+	@WebMethod(operationName ="/application/editCity")
 	public String editCity(HttpServletRequest request) {
 		String name = (String) request.getParameter("name");
 		String ptt = (String) request.getParameter("number");

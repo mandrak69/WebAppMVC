@@ -33,7 +33,9 @@ import validator.impl.UserValidator;
 						HttpSession session = request.getSession();
 						session.setAttribute("token", token);
 						session.setAttribute("username", checkUser.getUsername());
-						page = "/WEB-INF/pages/home.jsp";
+						page = "../index.jsp";
+					//	page = "/WEB-INF/pages/home.jsp";
+
 					}
 
 				}

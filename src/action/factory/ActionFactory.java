@@ -5,6 +5,7 @@ import action.impl.CityAction;
 import action.impl.HomeAction;
 import action.impl.LoginAction;
 import action.impl.LogoutAction;
+import action.impl.UsersAction;
 
 public class ActionFactory {
 	public static AbstractAction createActionFactory(String actionName) {
@@ -13,6 +14,7 @@ public class ActionFactory {
 			action = new LoginAction();
 			
 		}
+		
 		if(actionName.equalsIgnoreCase("/logout")) {
 			action = new LogoutAction();
 			
@@ -23,6 +25,18 @@ public class ActionFactory {
 		}
 		if(actionName.equalsIgnoreCase("/city")) {
 			action = new CityAction();
+			
+		}
+		if(actionName.equalsIgnoreCase("/user")) {
+			action = new UsersAction();
+			
+		}
+		if(actionName.equalsIgnoreCase("/index")) {
+			action = new UsersAction();
+			
+		}
+		if(actionName.equalsIgnoreCase("/user/login")) {
+			action = new LoginAction();
 			
 		}
 		return action;

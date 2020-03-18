@@ -57,6 +57,7 @@ public class ContextListener implements ServletContextListener {
 		views.put("allCities","/WEB-INF/pages/allcity.jsp");
 		views.put("new","/WEB-INF/pages/allcity.jsp");
 		views.put("edit","/WEB-INF/pages/edit.jsp");
+		views.put("menuet","menuet.jsp");
 		sce.getServletContext().setAttribute("views", views);
     ViewResolver viewResolver=new ViewResolver(views);
 

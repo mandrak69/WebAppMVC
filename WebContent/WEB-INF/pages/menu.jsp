@@ -10,8 +10,8 @@
 <%@page import="domain.User"%>
 <%@page import="util.Db"%>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.dropbtn {
+<link rel="stylesheet" type="text/css" href="..WebContent/WEB-INF/css/glavniMenu.css"">
+<style>.dropbtn {
   background-color: #4CAF50;
   color: white;
   padding: 16px;
@@ -44,8 +44,7 @@
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-</style>
+.dropdown:hover .dropbtn {background-color: #3e8e41;}</style>
 
 <c:out value="${sessionScope.username}"></c:out>
 
@@ -56,6 +55,8 @@
 <a href="../application/city?operation=allCities">All cities</a>
 <a href="../application/city?operation=NewCity">New city</a>
 
+</br>
+</br>
 
 <div id="prazan"></div>
 <div class="header">
